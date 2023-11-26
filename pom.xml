@@ -14,7 +14,7 @@
 	<name>three</name>
 	<description>SWE 645 Assignment 3</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
