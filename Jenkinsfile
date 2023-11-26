@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Restart deployment') {
             steps {
-                sh 'kubectl rollout restart deployment/sixfourfive'
+                sh 'kubectl rollout restart deployment/helma3'
             }
         }
     }
