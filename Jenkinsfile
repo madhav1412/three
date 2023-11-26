@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }        
         stage('Login to Docker Hub') {
             steps {
                 sh 'docker login -u madhavnemani -p jaQgip-xejka6-ressoz'
