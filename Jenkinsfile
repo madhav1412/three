@@ -1,11 +1,6 @@
 pipeline {
     agent any
-    stages {
-        stage('Build') { 
-            steps {
-                sh './mvnw clean install' 
-            }
-        }        
+    stages {      
         stage('Login to Docker Hub') {
             steps {
                 sh 'docker login -u madhavnemani -p jaQgip-xejka6-ressoz'
