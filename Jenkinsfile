@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    tools {
+        // Define the JDK tool
+        jdk 'Java17'
+        
+        // Define another tool, for example, Maven
+        maven 'Maven3'
+    }    
     stages {
         stage('Login to Docker Hub') {
             steps {
