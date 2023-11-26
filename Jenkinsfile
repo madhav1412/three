@@ -28,5 +28,15 @@ pipeline {
                 sh 'docker push madhavnemani/645a3'
             }
         }
+        stage('Copy kubeconfig') {
+            steps {
+                sh 'cp config ~/.kube/config'
+            }
+        }
+        stage('Restart deployment') {
+            steps {
+                sh 'kubectl rollout restart deployment/helm-three'
+            }
+        }
     }
 }
