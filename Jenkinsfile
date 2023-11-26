@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Restart deployment') {
             steps {
-                sh 'kubectl rollout restart deployment/helm-three'
+                sh 'kubectl rollout restart deployment/three-helm-three'
             }
         }
     }
