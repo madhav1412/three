@@ -1,6 +1,14 @@
 pipeline {
     agent any
-    stages {      
+    stages {
+        stage("Build") {
+          steps {
+            git url: 'https://github.com/cyrille-leclerc/multi-module-maven-project'
+            withMaven {
+              sh "mvn clean install"
+            } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+          }
+        }
         stage('Login to Docker Hub') {
             steps {
                 sh 'docker login -u madhavnemani -p jaQgip-xejka6-ressoz'
