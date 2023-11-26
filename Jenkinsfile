@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh '.\mvnw clean install' 
             }
         }        
         stage('Login to Docker Hub') {
