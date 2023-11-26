@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh '.\mvnw clean install' 
+                sh './mvnw clean install' 
             }
         }        
         stage('Login to Docker Hub') {
