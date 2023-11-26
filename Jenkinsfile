@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build Docker image') {
-            steps {
-                sh 'docker build -t madhavnemani/645a3 .'
-            }
-        }
         stage('Login to Docker Hub') {
             steps {
                 sh 'docker login -u madhavnemani -p jaQgip-xejka6-ressoz'
+            }
+        }        
+        stage('Build Docker image') {
+            steps {
+                sh 'docker build -t madhavnemani/645a3 .'
             }
         }
         stage('Push Docker image') {
