@@ -15,7 +15,7 @@ pipeline {
         }        
         stage('Login to Docker Hub') {
             steps {
-                sh 'docker login -u madhavnemani -p jaQgip-xejka6-ressoz'
+                sh 'docker login -u madhavnemani -p {{pass}}'
             }
         }        
         stage('Build Docker image') {
